@@ -86,6 +86,8 @@ As a visitor landing on the personal site homepage, I want to easily find the ga
 - **FR-003**: Each game MUST have a detail view accessible via `?game=<slug>` on the games page, reachable by clicking its overview entry
 - **FR-004**: The detail view MUST display: game name, detailed description, game jam or date, and cover image
 - **FR-005**: The detail view MUST include an image gallery with a large main image, left/right navigation arrows, and a thumbnail strip below
+- **FR-006**: Clicking gallery arrows MUST switch the main image to the adjacent screenshot; arrows are hidden at boundaries (no cycling)
+- **FR-007**: Clicking a gallery thumbnail MUST display that image in the main gallery view
 - **FR-008**: The detail view MUST include buttons to download and/or play the game, linking to external URLs
 - **FR-009**: The site MUST include a homepage with navigation to the games section
 - **FR-010**: The entire site MUST be fully static (HTML/CSS/JS files served directly, no server-side rendering)

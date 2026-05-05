@@ -32,22 +32,22 @@
      "name": "My Awesome Game",
      "shortDescription": "A short description for the overview page.",
      "description": "A longer detailed description for the detail page.",
-     "jam": {
-       "name": "Game Jam Name",
-       "url": "https://itch.io/jam/game-jam-name"
-     },
-     "coverImage": "assets/images/screenshots/my-awesome-game/cover.webp",
-     "screenshots": [
-       "assets/images/screenshots/my-awesome-game/01.webp",
-       "assets/images/screenshots/my-awesome-game/02.webp",
-       "assets/images/screenshots/my-awesome-game/03.webp"
-     ],
+      "jam": {
+        "name": "Game Jam Name",
+        "url": "https://itch.io/jam/game-jam-name"
+      },
+      "coverImage": "assets/images/screenshots/my-awesome-game/cover.svg",
+      "screenshots": [
+        "assets/images/screenshots/my-awesome-game/01.svg",
+        "assets/images/screenshots/my-awesome-game/02.svg",
+        "assets/images/screenshots/my-awesome-game/03.svg"
+      ],
      "playUrl": "https://pcosel.itch.io/my-awesome-game",
      "downloadUrl": "https://pcosel.itch.io/my-awesome-game/download"
    }
    ```
 3. Add cover and screenshot images to the `assets/images/screenshots/` directory under a subfolder for your game.
-5. Commit and push to `main` — GitHub Pages deploys automatically.
+4. Commit and push to `main` — GitHub Pages deploys automatically.
 
 ## Theme Toggle
 

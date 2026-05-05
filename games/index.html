@@ -25,7 +25,7 @@
   <main>
     <section id="overview">
       <h1>Games</h1>
-      <div id="games-list" class="games-grid"></div>
+      <div id="games-list" class="games-list"></div>
       <p id="empty-state" class="empty-state" style="display:none;">No games yet.</p>
     </section>
     <section id="detail" style="display:none;">
@@ -63,21 +63,23 @@
         });
 
         list.innerHTML = sorted.map(function (game) {
-          return '\n' +
-            '<a href="?game=' + encodeURIComponent(game.slug) + '" class="game-card">\n' +
-            '  <img src="' + (game.coverImage || placeholder) + '" alt="Cover for ' + game.name + '" onerror="this.src=\'' + placeholder + '\'">\n' +
-            '  <div class="card-info">\n' +
-            '    <h2>' + game.name + '</h2>\n' +
-            '    <p class="card-desc">' + game.shortDescription + '</p>\n' +
-            '    <p class="card-meta">' + renderJamOrDate(game) + '</p>\n' +
-            '  </div>\n' +
+          return '<a href="?game=' + encodeURIComponent(game.slug) + '" class="game-card">' +
+            '<img src="' + (game.coverImage || placeholder) + '" alt="Cover for ' + game.name + '" onerror="this.src=\'' + placeholder + '\'">' +
+            '<div class="card-info">' +
+            '<h2>' + game.name + '</h2>' +
+            '<p class="card-desc">' + game.shortDescription + '</p>' +
+            '<p class="card-meta">' + renderJamOrDate(game, false) + '</p>' +
+            '</div>' +
             '</a>';
         }).join("");
       }
 
-      function renderJamOrDate(game) {
+      function renderJamOrDate(game, asLink) {
         if (game.jam && game.jam.name) {
-          return '<a href="' + game.jam.url + '" target="_blank" rel="noopener">' + game.jam.name + '</a> · ' + formatDate(game.date);
+          if (asLink) {
+            return '<a href="' + game.jam.url + '" target="_blank" rel="noopener">' + game.jam.name + '</a> · ' + formatDate(game.date);
+          }
+          return game.jam.name + ' · ' + formatDate(game.date);
         }
         return formatDate(game.date);
       }
@@ -98,7 +100,7 @@
 
         var html = '<div class="detail-header">\n';
         html += '  <h1>' + game.name + '</h1>\n';
-        html += '  <p class="detail-meta">' + renderJamOrDate(game) + '</p>\n';
+        html += '  <p class="detail-meta">' + renderJamOrDate(game, true) + '</p>\n';
         html += '</div>\n';
         html += '<div class="detail-description">' + game.description + '</div>\n';
 
@@ -236,13 +238,6 @@
       fetchGames();
 
       window.addEventListener("popstate", function () {
-        var p = new URLSearchParams(window.location.search);
-        var s = p.get("game");
-        if (s) {
-          params.set("game", s);
-        } else {
-          params.delete("game");
-        }
         fetchGames();
       });
     })();
