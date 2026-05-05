@@ -12,6 +12,9 @@
   --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.12);
   --radius: 12px;
   --transition: 0.3s ease;
+  --arrow-bg: rgba(0, 0, 0, 0.5);
+  --arrow-bg-hover: rgba(0, 0, 0, 0.7);
+  --arrow-color: #ffffff;
 }
 
 [data-theme="dark"] {
@@ -26,6 +29,9 @@
   --border: #30363d;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --arrow-bg: rgba(0, 0, 0, 0.5);
+  --arrow-bg-hover: rgba(0, 0, 0, 0.7);
+  --arrow-color: #ffffff;
 }
 
 *, *::before, *::after {
@@ -255,4 +261,21 @@ main {
   main {
     padding: 3rem 2rem;
   }
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.game-card:active,
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.cta-link:active,
+.thumb:active,
+.nav-link:active,
+.nav-brand:active,
+.back-link:active {
+  transform: scale(0.98) !important;
+  transition: transform 0.1s ease;
 }

@@ -80,7 +80,7 @@
   font-size: 0.95rem;
 }
 
-.back-link:hover {
+.back-link:hover, .back-link:active {
   color: var(--accent-hover);
   text-decoration: underline;
 }
