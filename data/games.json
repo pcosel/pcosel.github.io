@@ -1,1 +1,95 @@
-{  "games": [    {      "slug": "nebula-drift",      "name": "Nebula Drift",      "shortDescription": "A fast-paced space shooter where you navigate through asteroid fields and alien fleets to escape a collapsing nebula.",      "description": "Nebula Drift is a fast-paced space shooter built for Ludum Dare 54. You pilot a damaged escape ship through a collapsing nebula, dodging asteroids, plasma storms, and hostile alien fleets. Collect energy cores to recharge your shields and unlock weapon upgrades on the fly. The game features procedurally generated levels, a pulsing synthwave soundtrack, and increasingly challenging wave patterns that test your reflexes to the limit.",      "jam": {        "name": "Ludum Dare 54",        "url": "https://itch.io/jam/ludum-dare-54"      },      "date": "2025-03-15",      "coverImage": "assets/images/nebula-drift/cover.svg",      "screenshots": [        "assets/images/nebula-drift/01.svg",        "assets/images/nebula-drift/02.svg",        "assets/images/nebula-drift/03.svg",        "assets/images/nebula-drift/04.svg"      ],      "playUrl": "https://pcosel.itch.io/nebula-drift",      "downloadUrl": "https://pcosel.itch.io/nebula-drift/download"    },    {      "slug": "last-light",      "name": "Last Light",      "shortDescription": "A haunting puzzle-platformer set in a world slowly being consumed by darkness. Restore the light one piece at a time.",      "description": "Last Light is a puzzle-platformer inspired by games like Limbo and Inside. Set in a world consumed by encroaching darkness, you guide a lone figure through ruined landscapes, solving environmental puzzles to reignite the scattered beacons of light. Each platforming section introduces new mechanics — light refraction, shadow manipulation, and gravity shifts — that build on each other to create an emotional journey from despair to hope. Developed solo over three months for GMTK Game Jam 2024.",      "jam": {        "name": "GMTK Game Jam 2024",        "url": "https://itch.io/jam/gmtk-game-jam-2024"      },      "date": "2024-02-18",      "coverImage": "assets/images/last-light/cover.svg",      "screenshots": [        "assets/images/last-light/01.svg",        "assets/images/last-light/02.svg",        "assets/images/last-light/03.svg"      ],      "playUrl": "https://pcosel.itch.io/last-light"    },    {      "slug": "pixel-fishing",      "name": "Pixel Fishing",      "shortDescription": "A cozy fishing simulator with adorable pixel art. Catch rare fish, decorate your dock, and compete on the leaderboard.",      "description": "Pixel Fishing is a relaxing fishing simulator with hand-drawn pixel art. Explore multiple lakes and ocean zones, each with unique fish species and weather patterns. Master the tension-based catch mechanic, craft better rods and bait, and gradually expand your fishing dock into a vibrant home. The game features a collection book with over 60 species, daily challenges, and a weekly leaderboard. Built in 72 hours for Brackeys Game Jam.",      "jam": {        "name": "Brackeys Game Jam 2023",        "url": "https://itch.io/jam/brackeys-jam-2023"      },      "date": "2023-09-10",      "coverImage": "assets/images/pixel-fishing/cover.svg",      "screenshots": [        "assets/images/pixel-fishing/01.svg"      ],      "downloadUrl": "https://pcosel.itch.io/pixel-fishing/download"    },    {      "slug": "void-runners",      "name": "Void Runners",      "shortDescription": "A local co-op roguelike where two players fight side by side through ever-changing procedurally generated dungeon levels.",      "description": "Void Runners is a chaotic local co-op roguelike for 1-2 players. Dive into procedurally generated dungeon levels, fight waves of monsters, collect randomized power-ups, and race to reach the core of the void before time runs out. Each run is unique with different enemy combinations, room layouts, and boss encounters. The game features two playable characters — a nimble rogue and a heavy tank — each with distinct abilities that synergize in unpredictable ways. Originally made for Global Game Jam 2022.",      "jam": {        "name": "Global Game Jam 2022",        "url": "https://itch.io/jam/global-game-jam-2022"      },      "date": "2022-01-22",      "coverImage": "assets/images/void-runners/cover.svg",      "screenshots": [        "assets/images/void-runners/01.svg",        "assets/images/void-runners/02.svg",        "assets/images/void-runners/03.svg",        "assets/images/void-runners/04.svg",        "assets/images/void-runners/05.svg",        "assets/images/void-runners/06.svg"      ],      "playUrl": "https://pcosel.itch.io/void-runners",      "downloadUrl": "https://pcosel.itch.io/void-runners/download"    },    {      "slug": "echo-chamber",      "name": "Echo Chamber",      "shortDescription": "An audio-based horror experience where you navigate a pitch-black maze using only sound cues and echolocation.",      "description": "Echo Chamber is an experimental audio-based horror game. You're trapped in a pitch-black maze and must navigate using echolocation — every movement produces sound waves that reveal the environment through audio feedback. Hear the echoes of walls, detect lurking creatures by their footsteps, and find your way to the exit. The game uses 3D spatial audio to create an intense, immersive horror experience. Developed independently over six months.",      "date": "2021-11-05",      "coverImage": "assets/images/echo-chamber/cover.svg",      "screenshots": [        "assets/images/echo-chamber/01.svg",        "assets/images/echo-chamber/02.svg",        "assets/images/echo-chamber/03.svg"      ],      "playUrl": "https://pcosel.itch.io/echo-chamber",      "downloadUrl": "https://pcosel.itch.io/echo-chamber/download"    }  ]}
+{
+  "games": [
+    {
+      "slug": "nebula-drift",
+      "name": "Nebula Drift",
+      "shortDescription": "A fast-paced space shooter where you navigate through asteroid fields and alien fleets to escape a collapsing nebula.",
+      "description": "Nebula Drift is a fast-paced space shooter built for Ludum Dare 54. You pilot a damaged escape ship through a collapsing nebula, dodging asteroids, plasma storms, and hostile alien fleets. Collect energy cores to recharge your shields and unlock weapon upgrades on the fly. The game features procedurally generated levels, a pulsing synthwave soundtrack, and increasingly challenging wave patterns that test your reflexes to the limit.",
+      "jam": {
+        "name": "Ludum Dare 54",
+        "url": "https://itch.io/jam/ludum-dare-54"
+      },
+      "date": "2025-03-15",
+      "coverImage": "assets/images/nebula-drift/cover.svg",
+      "screenshots": [
+        "assets/images/nebula-drift/01.svg",
+        "assets/images/nebula-drift/02.svg",
+        "assets/images/nebula-drift/03.svg",
+        "assets/images/nebula-drift/04.svg"
+      ],
+      "playUrl": "https://pcosel.itch.io/nebula-drift",
+      "downloadUrl": "https://pcosel.itch.io/nebula-drift/download"
+    },
+    {
+      "slug": "last-light",
+      "name": "Last Light",
+      "shortDescription": "A haunting puzzle-platformer set in a world slowly being consumed by darkness. Restore the light one piece at a time.",
+      "description": "Last Light is a puzzle-platformer inspired by games like Limbo and Inside. Set in a world consumed by encroaching darkness, you guide a lone figure through ruined landscapes, solving environmental puzzles to reignite the scattered beacons of light. Each platforming section introduces new mechanics — light refraction, shadow manipulation, and gravity shifts — that build on each other to create an emotional journey from despair to hope. Developed solo over three months for GMTK Game Jam 2024.",
+      "jam": {
+        "name": "GMTK Game Jam 2024",
+        "url": "https://itch.io/jam/gmtk-game-jam-2024"
+      },
+      "date": "2024-02-18",
+      "coverImage": "assets/images/last-light/cover.svg",
+      "screenshots": [
+        "assets/images/last-light/01.svg",
+        "assets/images/last-light/02.svg",
+        "assets/images/last-light/03.svg"
+      ],
+      "playUrl": "https://pcosel.itch.io/last-light"
+    },
+    {
+      "slug": "pixel-fishing",
+      "name": "Pixel Fishing",
+      "shortDescription": "A cozy fishing simulator with adorable pixel art. Catch rare fish, decorate your dock, and compete on the leaderboard.",
+      "description": "Pixel Fishing is a relaxing fishing simulator with hand-drawn pixel art. Explore multiple lakes and ocean zones, each with unique fish species and weather patterns. Master the tension-based catch mechanic, craft better rods and bait, and gradually expand your fishing dock into a vibrant home. The game features a collection book with over 60 species, daily challenges, and a weekly leaderboard. Built in 72 hours for Brackeys Game Jam.",
+      "jam": {
+        "name": "Brackeys Game Jam 2023",
+        "url": "https://itch.io/jam/brackeys-jam-2023"
+      },
+      "date": "2023-09-10",
+      "coverImage": "assets/images/pixel-fishing/cover.svg",
+      "screenshots": [
+        "assets/images/pixel-fishing/01.svg"
+      ],
+      "downloadUrl": "https://pcosel.itch.io/pixel-fishing/download"
+    },
+    {
+      "slug": "void-runners",
+      "name": "Void Runners",
+      "shortDescription": "A local co-op roguelike where two players fight side by side through ever-changing procedurally generated dungeon levels.",
+      "description": "Void Runners is a chaotic local co-op roguelike for 1-2 players. Dive into procedurally generated dungeon levels, fight waves of monsters, collect randomized power-ups, and race to reach the core of the void before time runs out. Each run is unique with different enemy combinations, room layouts, and boss encounters. The game features two playable characters — a nimble rogue and a heavy tank — each with distinct abilities that synergize in unpredictable ways. Originally made for Global Game Jam 2022.",
+      "jam": {
+        "name": "Global Game Jam 2022",
+        "url": "https://itch.io/jam/global-game-jam-2022"
+      },
+      "date": "2022-01-22",
+      "coverImage": "assets/images/void-runners/cover.svg",
+      "screenshots": [
+        "assets/images/void-runners/01.svg",
+        "assets/images/void-runners/02.svg",
+        "assets/images/void-runners/03.svg",
+        "assets/images/void-runners/04.svg",
+        "assets/images/void-runners/05.svg",
+        "assets/images/void-runners/06.svg"
+      ],
+      "playUrl": "https://pcosel.itch.io/void-runners",
+      "downloadUrl": "https://pcosel.itch.io/void-runners/download"
+    },
+    {
+      "slug": "echo-chamber",
+      "name": "Echo Chamber",
+      "shortDescription": "An audio-based horror experience where you navigate a pitch-black maze using only sound cues and echolocation.",
+      "description": "Echo Chamber is an experimental audio-based horror game. You're trapped in a pitch-black maze and must navigate using echolocation — every movement produces sound waves that reveal the environment through audio feedback. Hear the echoes of walls, detect lurking creatures by their footsteps, and find your way to the exit. The game uses 3D spatial audio to create an intense, immersive horror experience. Developed independently over six months.",
+      "date": "2021-11-05",
+      "coverImage": "assets/images/echo-chamber/cover.svg",
+      "screenshots": [
+        "assets/images/echo-chamber/01.svg",
+        "assets/images/echo-chamber/02.svg",
+        "assets/images/echo-chamber/03.svg"
+      ],
+      "playUrl": "https://pcosel.itch.io/echo-chamber",
+      "downloadUrl": "https://pcosel.itch.io/echo-chamber/download"
+    }
+  ]
+}
