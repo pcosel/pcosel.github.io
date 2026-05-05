@@ -20,7 +20,7 @@
 
 ### User Story 1 - Browse Games Overview (Priority: P1)
 
-As a visitor, I want to see a chronological list of all games on a dedicated page, so I can quickly scan the portfolio and pick games that interest me.
+As a visitor, I want to see a reverse-chronological list of all games on a dedicated page, so I can quickly scan the portfolio and pick games that interest me.
 
 **Why this priority**: This is the primary entry point to the feature. Without the overview page, there is no way to discover individual games.
 
