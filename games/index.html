@@ -36,8 +36,10 @@
   <script>
     (function () {
       const placeholder = "../assets/placeholder.svg";
-      const params = new URLSearchParams(window.location.search);
-      const slug = params.get("game");
+
+      function getCurrentSlug() {
+        return new URLSearchParams(window.location.search).get("game");
+      }
 
       function renderOverview(games) {
         const list = document.getElementById("games-list");
@@ -197,7 +199,7 @@
           '<p class="not-found">Game not found.</p><p><a href="./" class="back-link">← Back to all games</a></p>';
       }
 
-      function backToOverview() {
+      function setupBackButton() {
         var btn = document.getElementById("backToOverview");
         if (btn) btn.addEventListener("click", function (e) {
           e.preventDefault();
@@ -211,12 +213,12 @@
           .then(function (res) { return res.json(); })
           .then(function (data) {
             var games = data.games || [];
+            var slug = getCurrentSlug();
 
             if (slug) {
               var game = games.find(function (g) { return g.slug === slug; });
               if (game) {
                 renderDetail(game);
-                backToOverview();
               } else {
                 showNotFound();
               }
@@ -230,6 +232,7 @@
           });
       }
 
+      setupBackButton();
       fetchGames();
 
       window.addEventListener("popstate", function () {
