@@ -28,7 +28,7 @@ As a visitor, I want to see a chronological list of all games on a dedicated pag
 
 **Acceptance Scenarios**:
 
-1. **Given** I am on the games overview page, **When** I scroll through the list, **Then** I see all games ordered chronologically with name, short description, game jam/date, and cover image for each entry
+1. **Given** I am on the games overview page, **When** I scroll through the list, **Then** I see all games ordered reverse chronologically (newest first) with name, short description, game jam/date, and cover image for each entry
 2. **Given** I am on the games overview page, **When** I click a game entry, **Then** I am taken to that game's detail page
 3. **Given** I am viewing the overview on a mobile device, **When** I scroll, **Then** the layout adapts properly and remains readable
 
@@ -84,13 +84,11 @@ As a visitor landing on the personal site homepage, I want to easily find the ga
 - **FR-001**: The site MUST have a games overview page at `/games/` listing all games ordered reverse chronologically (newest first)
 - **FR-002**: Each game entry on the overview MUST display: name, short description, game jam or date (linked to the jam's Itch.io page when applicable), and a cover image
 - **FR-003**: Each game MUST have a detail view accessible via `?game=<slug>` on the games page, reachable by clicking its overview entry
-- **FR-004**: The detail page MUST display: game name, detailed description, game jam or date, and cover image
-- **FR-005**: The detail page MUST include an image gallery with a large main image, left/right navigation arrows, and a thumbnail strip below
-- **FR-006**: Clicking gallery arrows MUST switch the main image to the adjacent screenshot; arrows are hidden at boundaries (no cycling)
-- **FR-007**: Clicking a gallery thumbnail MUST display that image in the main gallery view
-- **FR-008**: The detail page MUST include buttons to download and/or play the game, linking to external URLs
+- **FR-004**: The detail view MUST display: game name, detailed description, game jam or date, and cover image
+- **FR-005**: The detail view MUST include an image gallery with a large main image, left/right navigation arrows, and a thumbnail strip below
+- **FR-008**: The detail view MUST include buttons to download and/or play the game, linking to external URLs
 - **FR-009**: The site MUST include a homepage with navigation to the games section
-- **FR-010**: The entire site MUST be fully static (pre-rendered HTML/CSS/JS, no server-side rendering)
+- **FR-010**: The entire site MUST be fully static (HTML/CSS/JS files served directly, no server-side rendering)
 - **FR-011**: The site MUST be responsive and display correctly on mobile, tablet, and desktop viewports
 - **FR-012**: The site MUST load fast with minimal assets and no unnecessary dependencies
 - **FR-013**: The site MUST support both a dark and a light color theme with a visible toggle switch to switch between them

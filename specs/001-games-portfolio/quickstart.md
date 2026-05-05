@@ -36,7 +36,7 @@
        "name": "Game Jam Name",
        "url": "https://itch.io/jam/game-jam-name"
      },
-     "coverImage": "assets/images/covers/my-awesome-game.webp",
+     "coverImage": "assets/images/screenshots/my-awesome-game/cover.webp",
      "screenshots": [
        "assets/images/screenshots/my-awesome-game/01.webp",
        "assets/images/screenshots/my-awesome-game/02.webp",
