@@ -83,7 +83,7 @@ As a visitor landing on the personal site homepage, I want to easily find the ga
 
 - **FR-001**: The site MUST have a games overview page at `/games/` listing all games ordered reverse chronologically (newest first)
 - **FR-002**: Each game entry on the overview MUST display: name, short description, game jam or date (linked to the jam's Itch.io page when applicable), and a cover image
-- **FR-003**: Each game MUST have a dedicated detail page accessible by clicking its overview entry
+- **FR-003**: Each game MUST have a detail view accessible via `?game=<slug>` on the games page, reachable by clicking its overview entry
 - **FR-004**: The detail page MUST display: game name, detailed description, game jam or date, and cover image
 - **FR-005**: The detail page MUST include an image gallery with a large main image, left/right navigation arrows, and a thumbnail strip below
 - **FR-006**: Clicking gallery arrows MUST switch the main image to the adjacent screenshot; arrows are hidden at boundaries (no cycling)
