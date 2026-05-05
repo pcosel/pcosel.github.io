@@ -36,11 +36,11 @@
         "name": "Game Jam Name",
         "url": "https://itch.io/jam/game-jam-name"
       },
-      "coverImage": "assets/images/screenshots/my-awesome-game/cover.svg",
+      "coverImage": "assets/images/my-awesome-game/cover.svg",
       "screenshots": [
-        "assets/images/screenshots/my-awesome-game/01.svg",
-        "assets/images/screenshots/my-awesome-game/02.svg",
-        "assets/images/screenshots/my-awesome-game/03.svg"
+        "assets/images/my-awesome-game/01.svg",
+        "assets/images/my-awesome-game/02.svg",
+        "assets/images/my-awesome-game/03.svg"
       ],
      "playUrl": "https://pcosel.itch.io/my-awesome-game",
      "downloadUrl": "https://pcosel.itch.io/my-awesome-game/download"

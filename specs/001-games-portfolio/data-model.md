@@ -12,7 +12,7 @@ Represents a single game entry in the portfolio.
 | `description` | string | Yes | Full detailed description shown on the detail page |
 | `jam` | object | No | Game jam info (see below) — optional, only present if game is from a jam |
 | `date` | string (YYYY-MM-DD) | Yes | Date of the game (required for ordering) |
-| `coverImage` | string | Yes | Relative path to the cover image (e.g., `assets/images/screenshots/my-game/cover.webp`) |
+| `coverImage` | string | Yes | Relative path to the cover image (e.g., `assets/images/my-game/cover.svg`) |
 | `screenshots` | string[] | No | Array of relative paths to screenshot images. Minimum 0, typical 3–8. |
 | `playUrl` | string (URL) | No | External Itch.io URL to play the game in-browser |
 | `downloadUrl` | string (URL) | No | External Itch.io URL to download the game |

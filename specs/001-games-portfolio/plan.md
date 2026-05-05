@@ -55,7 +55,7 @@ specs/001-games-portfolio/
 │   └── games.json             # Single JSON file defining all game data
 ├── assets/
 │   ├── images/
-│   │   └── screenshots/       # All images per game subdirectory (cover + screenshots)
+│   │   └── <slug>/            # Cover + screenshots per game (e.g., nebula-drift/)
 │   └── placeholder.svg        # Fallback image for failed loads
 └── games/
     └── index.html             # Games overview + detail page (single template, detail shown via ?game=<slug>)

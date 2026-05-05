@@ -64,7 +64,7 @@
 
         list.innerHTML = sorted.map(function (game) {
           return '<a href="?game=' + encodeURIComponent(game.slug) + '" class="game-card">' +
-            '<img src="' + (game.coverImage || placeholder) + '" alt="Cover for ' + game.name + '" onerror="this.src=\'' + placeholder + '\'">' +
+            '<img src="../' + (game.coverImage || placeholder) + '" alt="Cover for ' + game.name + '" onerror="this.src=\'' + placeholder + '\'">' +
             '<div class="card-info">' +
             '<h2>' + game.name + '</h2>' +
             '<p class="card-desc">' + game.shortDescription + '</p>' +
@@ -128,13 +128,13 @@
         var html = '<div class="gallery" id="gallery">\n';
         html += '  <div class="gallery-main">\n';
         html += '    <button class="gallery-arrow gallery-arrow--left" id="arrowLeft" aria-label="Previous image">‹</button>\n';
-        html += '    <img id="mainImage" src="' + screenshots[0] + '" alt="Screenshot" onerror="this.src=\'' + placeholder + '\'">\n';
+        html += '    <img id="mainImage" src="../' + screenshots[0] + '" alt="Screenshot" onerror="this.src=\'' + placeholder + '\'">\n';
         html += '    <button class="gallery-arrow gallery-arrow--right" id="arrowRight" aria-label="Next image">›</button>\n';
         html += '  </div>\n';
         html += '  <div class="gallery-thumbs" id="thumbs">\n';
         screenshots.forEach(function (src, i) {
           html += '    <button class="thumb' + (i === 0 ? " thumb--active" : '') + '" data-index="' + i + '" aria-label="Show screenshot ' + (i + 1) + '">\n';
-          html += '      <img src="' + src + '" alt="Thumbnail ' + (i + 1) + '" onerror="this.src=\'' + placeholder + '\'">\n';
+          html += '      <img src="../' + src + '" alt="Thumbnail ' + (i + 1) + '" onerror="this.src=\'' + placeholder + '\'">\n';
           html += '    </button>\n';
         });
         html += '  </div>\n';
@@ -152,7 +152,7 @@
         var thumbs = document.querySelectorAll(".thumb");
 
         function update() {
-          if (mainImage) mainImage.src = screenshots[currentIndex];
+          if (mainImage) mainImage.src = "../" + screenshots[currentIndex];
           if (arrowLeft) arrowLeft.style.display = currentIndex === 0 ? "none" : "";
           if (arrowRight) arrowRight.style.display = currentIndex === screenshots.length - 1 ? "none" : "";
           thumbs.forEach(function (t, i) {
