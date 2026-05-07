@@ -66,7 +66,7 @@ As the site maintainer, I want to include the jam theme when I add a new game to
 ### Functional Requirements
 
 - **FR-001**: System MUST display the game jam theme next to the jam name in plain text enclosed in parentheses, e.g., *Jam Name (Theme)*
-- **FR-002**: System MUST display the game jam theme underneath the jam name in plain text enclosed in parentheses, above the game description on the detail view
+- **FR-002**: System MUST display the game jam theme next to the jam name in plain text enclosed in parentheses, e.g., *Jam Name (Theme)*, inline with the jam name and date in the detail view
 - **FR-003**: System MUST gracefully omit the theme display when a jam has no theme defined, without showing empty placeholders or broken layout
 - **FR-004**: System MUST gracefully omit theme display for games that have no associated game jam
 - **FR-005**: Theme display MUST remain visually consistent with the existing page design (typography, spacing, color scheme) on both views

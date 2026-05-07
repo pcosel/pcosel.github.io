@@ -62,6 +62,10 @@
   color: var(--accent);
 }
 
+.card-meta .card-theme {
+  color: var(--text-muted);
+}
+
 .empty-state {
   text-align: center;
   color: var(--text-muted);

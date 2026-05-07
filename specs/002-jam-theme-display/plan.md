@@ -5,7 +5,7 @@
 
 ## Summary
 
-Add a `theme` field to the jam sub-object in `data/games.json` and display it on both the overview cards (inline with jam name, truncated at 20 characters) and the detail page (full theme below jam name, above description). The `renderJamOrDate` function in `games/index.html` will be modified to include the theme in plain text enclosed in parentheses, styled with existing CSS variables.
+Add a `theme` field to the jam sub-object in `data/games.json` and display it on both the overview cards (inline with jam name in parentheses, truncated at 20 characters) and the detail page (inline with jam name in parentheses, full theme, same font style). The `renderJamOrDate` function in `games/index.html` will be modified to include the theme inline for both views.
 
 ## Technical Context
 

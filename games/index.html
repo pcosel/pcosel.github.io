@@ -81,12 +81,29 @@
         }).join("");
       }
 
+      function escapeHtml(str) {
+        return str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+
+      function getJamTheme(game, truncate) {
+        if (!game.jam || !game.jam.theme) return null;
+        var theme = escapeHtml(game.jam.theme);
+        if (truncate && theme.length > 20) {
+          theme = theme.substring(0, 20) + '…';
+        }
+        return theme;
+      }
+
       function renderJamOrDate(game, asLink) {
-        if (game.jam && game.jam.name) {
+        var jam = game.jam;
+
+        if (jam && jam.name) {
+          var theme = getJamTheme(game, !asLink);
+          var themePart = theme ? ' (' + theme + ')' : '';
           if (asLink) {
-            return '<a href="' + game.jam.url + '" target="_blank" rel="noopener">' + game.jam.name + '</a> · ' + formatDate(game.date);
+            return '<a href="' + jam.url + '" target="_blank" rel="noopener">' + escapeHtml(jam.name) + '</a>' + themePart + ' · ' + formatDate(game.date);
           }
-          return game.jam.name + ' · ' + formatDate(game.date);
+          return escapeHtml(jam.name) + themePart + ' · ' + formatDate(game.date);
         }
         return formatDate(game.date);
       }

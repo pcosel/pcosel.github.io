@@ -21,8 +21,8 @@
 
 **CRITICAL**: No user story work can begin until this phase is complete.
 
-- [ ] T001 Add `theme` field to three of the four sample games with jams in `data/games.json` (nebula-drift, last-light, void-runners) with realistic theme strings; leave pixel-fishing without a theme to test the "jam exists but no theme" edge case
-- [ ] T002 Add an `escapeHtml` helper function to `games/index.html` that replaces `<`, `>`, `&`, and `"` with their HTML entities; modify `renderJamOrDate` (lines 84-92) to include `escapeHtml(game.jam.theme)` in parentheses after the jam name when present, using the `asLink` parameter to control truncation: truncate theme to 20 characters with `…` suffix when `asLink` is false (overview), display full theme when `asLink` is true (detail)
+- [X] T001 Add `theme` field to three of the four sample games with jams in `data/games.json` (nebula-drift, last-light, void-runners) with realistic theme strings; leave pixel-fishing without a theme to test the "jam exists but no theme" edge case
+- [X] T002 Add an `escapeHtml` helper function to `games/index.html` that replaces `<`, `>`, `&`, and `"` with their HTML entities; modify `renderJamOrDate` (lines 84-92) to include `escapeHtml(game.jam.theme)` in parentheses after the jam name when present, using the `asLink` parameter to control truncation: truncate theme to 20 characters with `…` suffix when `asLink` is false (overview), display full theme when `asLink` is true (detail)
 
 **Checkpoint**: Foundation ready — jam themes render in both views; user story styling can now proceed.
 
@@ -34,7 +34,7 @@
 
 **Independent Test**: Navigate to `/games/` and verify each game card with a jam displays the theme in parentheses next to the jam name, with long themes truncated at 20 characters and no visual artifacts for games without themes.
 
-- [ ] T003 [US1] Add a `.card-theme` CSS class in `css/overview.css` for the theme `<span>` wrapper within `.card-meta` (truncation is handled by JS in T002, CSS only provides consistent visual styling matching `.card-meta` font size and color)
+- [X] T003 [US1] Add a `.card-theme` CSS class in `css/overview.css` for the theme `<span>` wrapper within `.card-meta` (truncation is handled by JS in T002, CSS only provides consistent visual styling matching `.card-meta` font size and color)
 
 **Checkpoint**: User Story 1 complete — overview cards display truncated jam themes correctly.
 
@@ -46,7 +46,7 @@
 
 **Independent Test**: Navigate to `/games/?game=nebula-drift` and verify the theme appears in parentheses below the jam name, above the description, displayed in full without truncation.
 
-- [ ] T004 [US2] Verify `.detail-meta` styling in `css/detail.css` accommodates the theme text in parentheses without additional CSS changes; add theme-specific styling only if visual consistency requires it
+- [X] T004 [US2] Verify `.detail-meta` styling in `css/detail.css` accommodates the inline theme text in parentheses without additional CSS changes
 
 **Checkpoint**: User Story 2 complete — detail pages display full jam themes correctly.
 
@@ -58,7 +58,7 @@
 
 **Independent Test**: Add a new game entry with a jam theme to `data/games.json` and confirm it appears on both overview and detail views without code changes.
 
-- [ ] T005 [US3] Verify `specs/002-jam-theme-display/quickstart.md` accurately documents the `theme` field pattern for adding games with jam themes
+- [X] T005 [US3] Verify `specs/002-jam-theme-display/quickstart.md` accurately documents the `theme` field pattern for adding games with jam themes
 
 **Checkpoint**: User Story 3 complete — maintainer documentation reflects theme field usage.
 
@@ -68,8 +68,8 @@
 
 **Purpose**: Final verification and consistency checks.
 
-- [ ] T006 Verify visual consistency of theme display across desktop and mobile viewports (test at 480px breakpoint) in `css/overview.css` and `css/detail.css`
-- [ ] T007 Verify games without a jam (`echo-chamber`) and games with a jam but no theme render without empty placeholders or layout breaks
+- [X] T006 Verify visual consistency of theme display across desktop and mobile viewports (test at 480px breakpoint) in `css/overview.css` and `css/detail.css`
+- [X] T007 Verify games without a jam (`echo-chamber`) and games with a jam but no theme render without empty placeholders or layout breaks
 
 ---
 
