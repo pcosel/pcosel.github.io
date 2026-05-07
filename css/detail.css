@@ -50,11 +50,13 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: var(--arrow-bg);
   color: var(--arrow-color);
   border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 0.75rem;
   cursor: pointer;
   transition: background var(--transition);
   z-index: 2;
@@ -182,6 +184,10 @@
 
   .gallery-main {
     aspect-ratio: auto;
+  }
+
+  .gallery-arrow {
+    padding: 0.75rem 0.5rem;
   }
 
   .thumb {
