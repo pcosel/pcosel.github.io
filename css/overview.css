@@ -1,13 +1,13 @@
 .games-list {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
 }
 
 .game-card {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -17,36 +17,40 @@
 }
 
 .game-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-hover);
+  transform: translateY(-3px);
   border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 24px color-mix(in srgb, var(--accent) 30%, transparent);
+}
+
+.game-card:hover .card-info h2 {
+  color: var(--accent);
 }
 
 .game-card img {
-  width: 200px;
-  min-width: 200px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
 }
 
 .card-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 1rem 1.25rem;
-  min-width: 0;
+  padding: 1.25rem;
+  gap: 0.5rem;
 }
 
 .card-info h2 {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin-bottom: 0.35rem;
   color: var(--text-primary);
+  transition: color var(--transition);
 }
 
 .card-desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
+  flex: 1;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -54,16 +58,24 @@
 }
 
 .card-meta {
-  font-size: 0.8rem;
-  color: var(--text-muted);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.25rem;
 }
 
-.card-meta a {
+.card-jam {
   color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.card-meta .card-theme {
+.card-date {
   color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 .empty-state {
@@ -87,20 +99,4 @@
 .back-link:hover, .back-link:active {
   color: var(--accent-hover);
   text-decoration: underline;
-}
-
-@media (max-width: 480px) {
-  .game-card {
-    flex-direction: column;
-  }
-
-  .game-card img {
-    width: 100%;
-    min-width: 0;
-    height: 160px;
-  }
-
-  .card-info {
-    padding: 1rem;
-  }
 }

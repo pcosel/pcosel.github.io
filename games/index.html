@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Games — pcosel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/overview.css">
   <link rel="stylesheet" href="../css/detail.css">
@@ -70,12 +73,16 @@
         });
 
         list.innerHTML = sorted.map(function (game) {
+          var jamName = game.jam && game.jam.name ? escapeHtml(game.jam.name) : '';
           return '<a href="?game=' + encodeURIComponent(game.slug) + '" class="game-card">' +
             '<img src="../' + (game.coverImage || placeholder) + '" alt="Cover for ' + game.name + '" onerror="this.src=\'' + placeholder + '\'">' +
             '<div class="card-info">' +
             '<h2>' + game.name + '</h2>' +
             '<p class="card-desc">' + game.shortDescription + '</p>' +
-            '<p class="card-meta">' + renderJamOrDate(game, false) + '</p>' +
+            '<div class="card-meta">' +
+            '<span class="card-jam">' + jamName + '</span>' +
+            '<span class="card-date">' + formatDate(game.date) + '</span>' +
+            '</div>' +
             '</div>' +
             '</a>';
         }).join("");
@@ -122,16 +129,31 @@
         overview.style.display = "none";
         detail.style.display = "block";
 
-        var html = '<div class="detail-header">\n';
+        var hasScreenshots = game.screenshots && game.screenshots.length;
+        var layoutClass = 'detail-layout' + (hasScreenshots ? '' : ' detail-layout--no-gallery');
+
+        var tagsHtml = '';
+        if (game.tags && game.tags.length) {
+          tagsHtml = '<div class="tags">' + game.tags.map(function (t) {
+            return '<span class="tag">' + escapeHtml(t) + '</span>';
+          }).join('') + '</div>\n';
+        }
+
+        var html = '<div class="' + layoutClass + '">\n';
+
+        if (hasScreenshots) {
+          html += '<div class="detail-gallery-col">\n';
+          html += renderGallery(game.screenshots);
+          html += '</div>\n';
+        }
+
+        html += '<div class="detail-info-col">\n';
+        html += '<div class="detail-header">\n';
         html += '  <h1>' + game.name + '</h1>\n';
         html += '  <p class="detail-meta">' + renderJamOrDate(game, true) + '</p>\n';
         html += '</div>\n';
+        html += tagsHtml;
         html += '<div class="detail-description">' + game.description + '</div>\n';
-
-        if (game.screenshots && game.screenshots.length) {
-          html += renderGallery(game.screenshots);
-        }
-
         html += '<div class="detail-actions">\n';
         if (game.playUrl) {
           html += '  <a href="' + game.playUrl + '" target="_blank" rel="noopener" class="btn btn-primary">Play on Itch.io</a>\n';
@@ -140,6 +162,8 @@
           html += '  <a href="' + game.downloadUrl + '" target="_blank" rel="noopener" class="btn btn-secondary">Download</a>\n';
         }
         html += '</div>\n';
+        html += '</div>\n'; // detail-info-col
+        html += '</div>\n'; // detail-layout
 
         content.innerHTML = html;
 

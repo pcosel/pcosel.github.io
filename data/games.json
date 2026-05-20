@@ -11,6 +11,7 @@
         "theme": "Cozy catastrophe"
       },
       "date": "2025-03-15",
+      "tags": ["godot", "space-shooter", "procedural", "solo"],
       "coverImage": "assets/images/nebula-drift/cover.svg",
       "screenshots": [
         "assets/images/nebula-drift/01.svg",
@@ -32,6 +33,7 @@
         "theme": "Lost and Found"
       },
       "date": "2024-02-18",
+      "tags": ["godot", "puzzle-platformer", "atmospheric", "solo"],
       "coverImage": "assets/images/last-light/cover.svg",
       "screenshots": [
         "assets/images/last-light/01.svg",
@@ -50,6 +52,7 @@
         "url": "https://itch.io/jam/brackeys-jam-2023"
       },
       "date": "2023-09-10",
+      "tags": ["pixel-art", "simulation", "relaxing", "solo"],
       "coverImage": "assets/images/pixel-fishing/cover.svg",
       "screenshots": [
         "assets/images/pixel-fishing/01.svg"
@@ -67,6 +70,7 @@
         "theme": "Perspective"
       },
       "date": "2022-01-22",
+      "tags": ["roguelike", "co-op", "procedural", "dungeon"],
       "coverImage": "assets/images/void-runners/cover.svg",
       "screenshots": [
         "assets/images/void-runners/01.svg",
@@ -85,6 +89,7 @@
       "shortDescription": "An audio-based horror experience where you navigate a pitch-black maze using only sound cues and echolocation.",
       "description": "Echo Chamber is an experimental audio-based horror game. You're trapped in a pitch-black maze and must navigate using echolocation — every movement produces sound waves that reveal the environment through audio feedback. Hear the echoes of walls, detect lurking creatures by their footsteps, and find your way to the exit. The game uses 3D spatial audio to create an intense, immersive horror experience. Developed independently over six months.",
       "date": "2021-11-05",
+      "tags": ["audio", "horror", "experimental", "solo"],
       "coverImage": "assets/images/echo-chamber/cover.svg",
       "screenshots": [
         "assets/images/echo-chamber/01.svg",

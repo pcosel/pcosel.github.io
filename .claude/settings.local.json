@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"c:\\\\repos\\\\pcosel.github.io\" -Recurse -Force)",
+      "Bash(Select-Object -Property FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "Bash(grep -E \"\\\\.\\(html|css|js|json\\)$\")",
+      "Bash(Get-ChildItem -Path \"c:\\\\repos\\\\pcosel.github.io\" -Force)",
+      "Bash(Select-Object Name, PSIsContainer)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\repos\\\\pcosel.github.io\" -Directory | ForEach-Object { Write-Host \"\"; Write-Host \"$\\($_.Name\\)/\"; Get-ChildItem -Path $_.FullName -File -Recurse | Measure-Object | Select-Object -ExpandProperty Count } | head -40)"
+    ]
+  }
+}
