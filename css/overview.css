@@ -18,12 +18,20 @@
 
 .game-card:hover {
   transform: translateY(-3px);
-  border-color: var(--accent);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 24px color-mix(in srgb, var(--accent) 30%, transparent);
+  border-color: transparent;
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(135deg, var(--accent), var(--gradient-to)) border-box;
+  box-shadow:
+    0 0 28px color-mix(in srgb, var(--accent) 35%, transparent),
+    0 0 28px color-mix(in srgb, var(--gradient-to) 20%, transparent);
 }
 
 .game-card:hover .card-info h2 {
-  color: var(--accent);
+  background: linear-gradient(90deg, var(--accent), var(--gradient-to));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .game-card img {

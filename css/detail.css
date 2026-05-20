@@ -171,7 +171,7 @@
   font-weight: 600;
   font-size: 0.95rem;
   text-align: center;
-  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition);
+  transition: background-color var(--transition), transform var(--transition), box-shadow var(--transition), background-position var(--transition);
 }
 
 .btn:hover {
@@ -179,14 +179,18 @@
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--gradient-to), var(--accent));
+  background-size: 200% 100%;
+  background-position: left center;
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  background-position: right center;
   color: #fff;
-  box-shadow: 0 0 0 1px var(--accent), 0 0 20px color-mix(in srgb, var(--accent) 40%, transparent);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--accent) 35%, transparent),
+    0 0 18px color-mix(in srgb, var(--gradient-to) 22%, transparent);
 }
 
 .btn-secondary {
@@ -196,9 +200,14 @@
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
+  border-color: transparent;
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(135deg, var(--accent), var(--gradient-to)) border-box;
   color: var(--text-primary);
-  box-shadow: 0 0 0 1px var(--accent), 0 0 20px color-mix(in srgb, var(--accent) 30%, transparent);
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--accent) 25%, transparent),
+    0 0 18px color-mix(in srgb, var(--gradient-to) 16%, transparent);
 }
 
 .not-found {
